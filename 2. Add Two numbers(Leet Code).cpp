@@ -122,11 +122,10 @@ struct node *add(struct node *s1,struct node *s2)
 	ptr2=s2;
 	if(list1==list2)// When the number of elements in list 1 is equal to list 2
 	{
-		printf("\n 1 test case\n");
+
 		while(ptr1!=NULL)
     	{
     		preptr1=ptr1;
-    		printf("\n 2 test case \n");
     		sum=ptr1->data+ptr2->data+carry;
     		carry=sum/10;
     		num=sum%10;
@@ -152,21 +151,21 @@ struct node *add(struct node *s1,struct node *s2)
 			if(ptr2==NULL)
 			{
 
-			    sum=ptr1->data+carry;
-    	    	carry=sum/10;
-    	    	num=sum%10;
-    	    	ptr1->data=num;
-    	    	ptr1=ptr1->next;
+			       sum=ptr1->data+carry;
+    	                       carry=sum/10;
+    	    	               num=sum%10;
+    	    	               ptr1->data=num;
+    	    	               ptr1=ptr1->next;
 			}
 			else
 			{
 
 			    sum=ptr1->data+ptr2->data+carry;
-    	    	carry=sum/10;
-    	    	num=sum%10;
-    	    	ptr1->data=num;
-    	    	ptr1=ptr1->next;
-    	    	ptr2=ptr2->next;
+    	    	            carry=sum/10;
+    	    	            num=sum%10;
+    	    	            ptr1->data=num;
+    	    	            ptr1=ptr1->next;
+    	    	            ptr2=ptr2->next;
 			}
 
 		}
@@ -189,21 +188,21 @@ struct node *add(struct node *s1,struct node *s2)
 			if(ptr1==NULL)
 			{
 
-			    sum=ptr2->data+carry;
-    	    	carry=sum/10;
-    	    	num=sum%10;
-    	    	ptr2->data=num;
-    	    	ptr2=ptr2->next;
+			      sum=ptr2->data+carry;
+    	    	              carry=sum/10;
+    	    	              num=sum%10;
+    	                      ptr2->data=num;
+    	    	              ptr2=ptr2->next;
 			}
 			else
 			{
 
-			    sum=ptr1->data+ptr2->data+carry;
-    	    	carry=sum/10;
-    	    	num=sum%10;
-    	    	ptr2->data=num;
-    	    	ptr1=ptr1->next;
-    	    	ptr2=ptr2->next;
+			      sum=ptr1->data+ptr2->data+carry;
+    	    	              carry=sum/10;
+    	    	              num=sum%10;
+    	    	              ptr2->data=num;
+    	    	              ptr1=ptr1->next;
+    	    	              ptr2=ptr2->next;
 			}
 
 		}
