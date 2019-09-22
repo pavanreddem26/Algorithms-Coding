@@ -95,9 +95,9 @@ struct node *reverse_linkedlist(struct node *start)
 	{
 		nextptr=start->next;
 		if(start!=NULL&&nextptr==NULL)///If there is only one element in the linkedlist
-    	{
-    		return(start);
-    	}
+         	{
+        		return(start);
+        	}
     	else
     	{
     		preptr->next=NULL;///making the first element->next=NULL
