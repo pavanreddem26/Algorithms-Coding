@@ -100,71 +100,71 @@ struct node *n_node_from_last(struct node *start,int last)
 	else
 	{
 		while(ptr!=NULL)
-    	{
-	    	count=count+1;
-	    	ptr=ptr->next;
-    	}
-    	printf("\n The total number of elements in th list are\n");
-    	printf("%d",count);
-    	printf("\n");
-    	ptr=start;
-    	if(count>=last)///Considering last as the valid number
-    	{
-	    	m=count-last+1;
-    	}
-	    else
-    	{
-	    	m=count-last;
-    	}
-	    printf("\n The value of m is \n");
-    	printf("%d",m);
-    	printf("\n");
-    	if(count==1)////This is one of the most important case
-    	{
-	    	if(m<0)
-	    	{
-	    		printf("\n Entered value is greater than total number of elements in the list");
-         		printf("\n No element is removed from the list\n");
-        		return(start);
-     		}
-	    	else/// There is only one element and we are removing that element
-	    	{
-		    	start=NULL;
-		    	return(NULL);
-		    }
-	    }
-	    else
-	    {
-	    	if(m<0)
+         	{
+         	    	count=count+1;
+        	    	ptr=ptr->next;
+         	}
+          	printf("\n The total number of elements in th list are\n");
+        	printf("%d",count);
+        	printf("\n");
+         	ptr=start;
+        	if(count>=last)///Considering last as the valid number
         	{
-        		printf("\n Entered value is greater than total number of elements in the list");
-        		printf("\n No element is removed from the list\n");
-        		return(start);
+        	    	m=count-last+1;
         	}
         	else
         	{
-        		while(loo!=m)
-    	     	{
-        			printf("\n test case 1\n");
-     	    		preptr=ptr;
-        			ptr=ptr->next;
-    	    		loo++;
-    	    	}
-    	    	if(preptr==start)
-    	    	{
-     		    	start=preptr->next;
-     		    	return(start);
-    	     	}
+        	    	m=count-last;
+         	}
+	        printf("\n The value of m is \n");
+        	printf("%d",m);
+         	printf("\n");
+        	if(count==1)////This is one of the most important case
+		{
+        	    	if(m<0)
+	        	{
+	        		printf("\n Entered value is greater than total number of elements in the list");
+                		printf("\n No element is removed from the list\n");
+                		return(start);
+     	        	}
+	        	else/// There is only one element and we are removing that element
+	        	{
+		        	start=NULL;
+		        	return(NULL);
+		        }
+               }
+	       else
+               {
+	        	if(m<0)
+                	{
+                		printf("\n Entered value is greater than total number of elements in the list");
+                 		printf("\n No element is removed from the list\n");
+                		return(start);
+                	}
+                	else
+                	{
+                		while(loo!=m)
+    	                	{
+                 			printf("\n test case 1\n");
+                	    		preptr=ptr;
+                 			ptr=ptr->next;
+    	                		loo++;
+    	                	}
+    	                	if(preptr==start)
+                	    	{
+                		    	start=preptr->next;
+                 		    	return(start);
+                	     	}
 				else
-         		{
-    	    		preptr->next=ptr->next;
-    		    	free(ptr);
-    	    		return(start);
-    	    	}
+                 		{
+                	    		preptr->next=ptr->next;
+                 		    	free(ptr);
+                	    		return(start);
+                	    	}
 
 		
-        	}   
-    	}
+                 	}   
+        	}
 	}
 	
 
