@@ -101,11 +101,11 @@ struct node *n_node_from_last(struct node *start,int last)
 	printf("%d",count);
 	printf("\n");
 	ptr=start;
-	if(count>=last)///Considering last as the valid number
+	if(count>=last)///Considering last!=0
 	{
 		m=count-last+1;
 	}
-	else
+	else//I used if and else because consider the last=6 then m=(5-6+1)=0||m=0 means dont delete any element but the last value entered is invalid
 	{
 		m=count-last;
 	}
