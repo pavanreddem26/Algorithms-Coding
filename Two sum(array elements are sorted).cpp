@@ -1,3 +1,7 @@
+DETAILS:
+TIME COMPLEXITY= O(N)
+SPACE COMPLEXITY=O(CONSTANT)
+
 #include<stdio.h>///Fin
 #include<conio.h>
 int main()
@@ -20,24 +24,24 @@ int main()
 		sum=a[i]+a[j];
 		if(j-i>0)
 		{
-		    if(sum==target)
-	    	{
-	     		flag=1;
-	     		printf("\n The index values where the numbers exsists in the array are\n");
-    			printf("\n Index 1 w.r.t to array\n");///Remember that array  
-    			printf("%d",i);
-    			printf("\n Index 2\n");
-    			printf("%d",j);
-    			break;
-    		}
-     		else if(sum<target)
-    		{
-    			i=i+1;
-	    	}
-    		else
-    		{
-    			j=j-1;
-     		}
+		        if(sum==target)
+	        	{
+	     	        	flag=1;
+	     	        	printf("\n The index values where the numbers exsists in the array are\n");
+    		        	printf("\n Index 1 w.r.t to array\n");///Remember that array  
+    		        	printf("%d",i);
+    		        	printf("\n Index 2\n");
+    		        	printf("%d",j);
+    		        	break;
+    	        	}
+         		else if(sum<target)
+         		{
+    	         		i=i+1;
+	         	}
+    	        	else
+    	         	{
+    	         		j=j-1;
+     	        	}
 			
 		}
 		else
