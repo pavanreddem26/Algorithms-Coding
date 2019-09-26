@@ -1,3 +1,8 @@
+Analysis:
+Runtime--O(n)
+Hashmap search--O(1+α)
+α-Number of collisons goes to each block of mapping
+
 #include<stdio.h>
 #include<conio.h>
 #include<malloc.h>
