@@ -1,4 +1,4 @@
-//Merge 3 sorted array into a single array
+//Merge 3 sorted arrays into a single array
 // Time complexity---n(linear)
 //Space Complexity--n
 
