@@ -1,3 +1,6 @@
+//Merge 2 sorted array into a single array
+// Time complexity---n(linear)
+//Space Complexity--n
 #include<stdio.h>
 #include<conio.h>
 int main()
