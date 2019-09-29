@@ -1,3 +1,6 @@
+//Add two numbers using Linked List
+// Time complexity------Linear(n)
+//Space Complexity------Constant space used
 #include<stdio.h>
 #include<malloc.h>
 #include<conio.h>
