@@ -1,3 +1,5 @@
+//Time complexity----n^2(linear)
+//space complexity---constant memory usage
 #include<stdio.h>
 #include<conio.h>
 int main()
