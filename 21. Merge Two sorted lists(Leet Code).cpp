@@ -1,3 +1,7 @@
+//Merge two sorted lists
+//Time complexity------Linear(n)
+//space complexity-----Constant Space used
+
 #include<stdio.h>
 #include<conio.h>
 #include<malloc.h>
