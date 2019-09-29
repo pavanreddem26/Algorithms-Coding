@@ -1,4 +1,4 @@
-DETAILS:
+//TWO SUM(When the array is sorted)
 TIME COMPLEXITY= O(N)
 SPACE COMPLEXITY=O(CONSTANT)
 
