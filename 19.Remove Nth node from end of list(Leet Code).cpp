@@ -1,3 +1,6 @@
+///Remove Nth node from the end of Linked List
+//Time Complexity-------Linear(n)
+//Space Complexity------Constant Memory used
 #include<stdio.h>
 #include<conio.h>
 #include<malloc.h>
