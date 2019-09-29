@@ -1,3 +1,6 @@
+//Reverse a Given Linked List
+//Time Complexity------Linear(n)
+//Space Complexity----constant space used
 #include<stdio.h>
 #include<conio.h>
 #include<malloc.h>
