@@ -2,7 +2,7 @@
 #include<conio.h>
 int main()
 {
-	int i,j,a[4][4],b[4][4],m,n,c;
+	int i,j,a[i][j],b[i][j],m,n,c;
 	printf("\n Enter the values of i\n");
 	scanf("%d",&i);
 	printf("\n Enter the values of j\n");
