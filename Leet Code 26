@@ -1,0 +1,31 @@
+
+
+int removeDuplicates(int* nums, int numsSize){
+    int i,j,k,m;
+    i=0;
+    j=0;
+    if(numsSize==0)
+    {
+        return(0);
+    }
+    else
+    {
+        for(k=0;k<numsSize;k++)
+        {
+            if(nums[i]==nums[j])
+            {
+                  j=j+1;
+             }
+             else
+            {
+                i++;
+                nums[i]=nums[j];
+                j++;
+              }
+    }
+    return(i+1);
+        
+    }
+    
+
+}
