@@ -1,0 +1,145 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
+{
+	struct ListNode *ptr1,*preptr1,*preptr2,*ptr2,*new_node;
+	int carry,sum,num,list1,list2;
+	carry=0;
+	sum=0;
+	num=0;
+	ptr1=l1;
+	ptr2=l2;
+	list1=0;
+	list2=0;
+    if(l1==NULL &&l2==NULL)
+    {
+        return(NULL);
+    }
+    else if(l1==NULL &&l2!=NULL)
+    {
+        return(l2);
+    }
+    else if(l1!=NULL&&l2==NULL)
+    {
+        return(l1);
+    }
+    else
+    {
+        while(ptr1!=NULL)
+	{
+		list1=list1+1;
+		ptr1=ptr1->next;
+	}
+	while(ptr2!=NULL)
+	{
+		list2=list2+1;
+		ptr2=ptr2->next;
+	}
+	ptr1=l1;
+	ptr2=l2;
+	if(list1==list2)
+	{
+	
+		while(ptr1!=NULL)
+    	{
+    		preptr1=ptr1;
+    		sum=ptr1->val+ptr2->val+carry;
+    		carry=sum/10;
+    		num=sum%10;
+    		ptr1->val=num;
+    		ptr1=ptr1->next;
+    		ptr2=ptr2->next;
+    	}
+    	if(carry!=0)
+    	{
+            new_node=(struct ListNode *)malloc(sizeof(struct ListNode));
+    		new_node->next=NULL;
+    		new_node->val=carry;
+    		preptr1->next=new_node;
+		}
+		return (l1);
+	}
+	else if(list1>list2)
+	{
+
+		while(ptr1!=NULL)
+		{
+			preptr1=ptr1;
+			if(ptr2==NULL)
+			{
+
+			    sum=ptr1->val+carry;
+    	    	carry=sum/10;
+    	    	num=sum%10;
+    	    	ptr1->val=num;
+    	    	ptr1=ptr1->next;
+			}
+			else
+			{
+
+			    sum=ptr1->val+ptr2->val+carry;
+    	    	carry=sum/10;
+    	    	num=sum%10;
+    	    	ptr1->val=num;
+    	    	ptr1=ptr1->next;
+    	    	ptr2=ptr2->next;
+			}
+
+	    }
+		if (carry!=0)
+		{
+            new_node=(struct ListNode *)malloc(sizeof(struct ListNode));
+			preptr1->next=new_node;
+			new_node->val=carry;
+			new_node->next=NULL;
+		}
+		return (l1);
+		
+	}
+	{
+
+		while(ptr2!=NULL)
+		{
+			preptr2=ptr2;
+			if(ptr1==NULL)
+			{
+
+			    sum=ptr2->val+carry;
+    	    	carry=sum/10;
+    	    	num=sum%10;
+    	    	ptr2->val=num;
+    	    	ptr2=ptr2->next;
+			}
+			else
+			{
+
+			    sum=ptr1->val+ptr2->val+carry;
+    	    	carry=sum/10;
+    	    	num=sum%10;
+    	    	ptr2->val=num;
+    	    	ptr1=ptr1->next;
+    	    	ptr2=ptr2->next;
+			}
+
+		}
+		if(carry!=0)
+		{
+            new_node=(struct ListNode *)malloc(sizeof(struct ListNode));
+			preptr2->next=new_node;
+			new_node->val=carry;
+			new_node->next=NULL;
+		}
+		return(l2);
+		
+	}
+        
+    }
+	
+}
