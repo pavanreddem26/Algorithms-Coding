@@ -1,0 +1,48 @@
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+struct TreeNode* searchBST(struct TreeNode* root, int val){
+    struct TreeNode *ptr;
+    int flag;
+    flag=0;
+    ptr=root;
+    if(ptr==NULL)
+    {
+        return(NULL);
+    }
+    else
+    {
+        while(ptr!=NULL)
+        {
+            if(val<ptr->val)
+            {
+                ptr=ptr->left;
+            }
+            else if(val==ptr->val)
+            {
+                flag=1;
+                break;
+            }
+            else
+            {
+                ptr=ptr->right;
+            }
+        }
+    }
+    if(flag==1)
+    {
+        return(ptr);
+    }
+    else
+    {
+        return(NULL);
+    }
+
+}
