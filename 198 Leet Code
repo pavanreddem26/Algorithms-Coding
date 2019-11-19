@@ -1,0 +1,41 @@
+int rob(int* nums, int numsSize){
+  	int i,j,k,max,max1,a[numsSize+1];
+	max=0;
+    if(numsSize==0)
+    {
+        return(0);
+    }
+    else
+    {
+         for(i=0;i<numsSize;i++)
+        {
+            if(i<2)
+            {
+                max1=0;
+                a[i]=max1+nums[i];
+            }
+            else
+            {
+                max1=0;
+                for(j=i-2;j>=0;j--)
+                {   
+                    if(max1<a[j])
+                    {
+                        max1=a[j];
+                     }
+                 }
+                 a[i]=nums[i]+max1;
+            }
+    }
+
+    }
+
+    for(i=0;i<numsSize;i++)
+    {
+        if(max<a[i])
+        {
+            max=a[i];
+        }
+    }
+    return(max);
+}
