@@ -1,0 +1,25 @@
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        if(len(nums)>1):
+            first=nums[0]
+            if(len(nums)%2==0):
+                mid=int(len(nums)/2)
+            else:
+                mid=int((len(nums)-1)/2)
+            if(target<first and target<nums[mid]):
+                self.search(nums[mid+1:len(nums)],target)
+            elif(target>first and target>nums[mid]):
+                self.search(nums[0:mid+1],target)
+            elif(target<first and target>nums[mid]):
+                self.search(nums[mid+1:len(nums)],target)
+            else:
+                self.search(nums[0:mid],target)
+        else:
+            if(len(nums)==1):
+                if(nums[0]==target):
+                    print("Target Found")
+                else:
+                    print("Target NOT Found")
+            
+            else:
+               print("Target NOT Found")
